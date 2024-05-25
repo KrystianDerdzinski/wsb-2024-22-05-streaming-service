@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './test-google-api-key.component.scss',
 })
 export class TestGoogleApiKeyComponent implements OnInit {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   testResult: any;
 
   ngOnInit(): void {
