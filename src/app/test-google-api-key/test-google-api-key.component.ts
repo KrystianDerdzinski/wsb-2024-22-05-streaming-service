@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { API_KEY } from '../API_KEY.const';
 import { CommonModule } from '@angular/common';
 
-/* 
+/*
   The purpose of this component is to test the Google Cloud API KEY.
   Feel free to delete it after obtaining and testing API KEY.
 */
@@ -31,3 +31,6 @@ export class TestGoogleApiKeyComponent implements OnInit {
       });
   }
 }
+
+// stworz api service i wstrzyknij go przez dependency injection
+// do app component
