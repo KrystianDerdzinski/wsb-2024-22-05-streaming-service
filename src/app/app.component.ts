@@ -1,10 +1,7 @@
-import { ApiService } from './api.service';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { PlaylistInterface } from './interfaces/playlist.interface';
 import { CommonModule } from '@angular/common';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -13,8 +10,4 @@ import { Observable } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  playlist$: Observable<PlaylistInterface> = this.apiService.getPlaylistName$();
-
-  constructor(private apiService: ApiService) {}
-}
+export class AppComponent {}

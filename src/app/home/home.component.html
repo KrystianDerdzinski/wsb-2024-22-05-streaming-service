@@ -1,1 +1,10 @@
-<p>home works!</p>
+<ng-container *ngIf="playlist$ | async as playlist">
+  {{ playlist.items[0].snippet.title }}
+</ng-container>
+
+<ng-container *ngIf="playlistItems$ | async as playlistItems">
+  <ng-container *ngFor="let video of playlistItems.items">
+    {{ video.snippet.title | json }}
+    {{ video.snippet.thumbnails.high.url }}
+  </ng-container>
+</ng-container>
