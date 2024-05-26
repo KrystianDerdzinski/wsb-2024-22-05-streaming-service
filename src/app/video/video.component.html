@@ -1,1 +1,15 @@
-<p>video works!</p>
+<iframe
+  width="560"
+  height="315"
+  [src]="videoUrl | safe"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+></iframe>
+
+<mat-icon>arrow_back</mat-icon>
+
+<!-- zrob iframe na cale okno przegladarki (SCSS)-->
+<!-- dodaj w prawym gornym rogu strzalke przenoszaca na strone glowna -->

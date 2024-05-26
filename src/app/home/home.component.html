@@ -1,10 +1,16 @@
+<app-header></app-header>
+
 <ng-container *ngIf="playlist$ | async as playlist">
   {{ playlist.items[0].snippet.title }}
 </ng-container>
 
 <ng-container *ngIf="playlistItems$ | async as playlistItems">
   <ng-container *ngFor="let video of playlistItems.items">
-    {{ video.snippet.title | json }}
-    {{ video.snippet.thumbnails.high.url }}
+    <div style="border: 1px solid red">
+      <!-- {{ video.snippet.thumbnails.high.url }} -->
+      <a [href]="'video?id=' + video.snippet.resourceId.videoId">
+        {{ video.snippet.title | json }}
+      </a>
+    </div>
   </ng-container>
 </ng-container>
