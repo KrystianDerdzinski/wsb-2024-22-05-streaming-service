@@ -5,11 +5,11 @@ import { PlaylistItemsInterface } from '../interfaces/playlist-items.interface';
 import { PlaylistInterface } from '../interfaces/playlist.interface';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../header/header.component';
-
+import { MatCardModule } from '@angular/material/card';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeaderComponent],
+  imports: [CommonModule, HeaderComponent, MatCardModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

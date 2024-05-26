@@ -6,11 +6,19 @@
 
 <ng-container *ngIf="playlistItems$ | async as playlistItems">
   <ng-container *ngFor="let video of playlistItems.items">
-    <div style="border: 1px solid red">
-      <!-- {{ video.snippet.thumbnails.high.url }} -->
-      <a [href]="'video?id=' + video.snippet.resourceId.videoId">
-        {{ video.snippet.title | json }}
-      </a>
-    </div>
+    <!-- {{ video.snippet.thumbnails.high.url }} -->
+    <mat-card class="single-video">
+      <img mat-card-image [src]="video.snippet.thumbnails.high.url" alt="" />
+
+      <mat-card-header>
+        <a
+          class="card-title"
+          mat-card-title
+          [href]="'video?id=' + video.snippet.resourceId.videoId"
+        >
+          {{ video.snippet.title }}
+        </a>
+      </mat-card-header>
+    </mat-card>
   </ng-container>
 </ng-container>
