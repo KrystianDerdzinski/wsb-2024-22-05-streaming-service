@@ -1,0 +1,21 @@
+iframe {
+  width: 100%;
+  height: 100vh;
+}
+
+.arrow-link {
+  position: absolute;
+  left: 32px;
+  top: 32px;
+
+  &:visited {
+    color: black;
+  }
+}
+
+.arrow-icon {
+  $icon-size: 48px;
+  font-size: $icon-size;
+  width: $icon-size;
+  height: $icon-size;
+}
